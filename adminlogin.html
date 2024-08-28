@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333; /* Dark gray background */
+            font-family: Arial, sans-serif;
+        }
+
+        .top-bar {
+            background-color: red; /* Red top bar */
+            padding: 10px 0;
+            text-align: left; /* Align the text to the left */
+        }
+
+        .top-bar h1 {
+            color: #fff;
+            margin-left: 20px; /* Add some left margin for spacing */
+        }
+
+        .login-container {
+            background-color: #fff; /* White background for login container */
+            max-width: 400px;
+            margin: 50px auto 0; /* Margin-top adjusted for moving it down */
+            padding: 90px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: left; /* Align the text to the left */
+            margin-left: 20px; /* Add some left margin for spacing */
+        }
+
+        #login-form {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"] {
+            background-color: red; /* Red login button */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        p.error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <h1>ADMIN LOGIN</h1>
+    </div>
+    <div class="login-container">
+        <form id="login-form">
+            
+            <input type="text" id="email" name="email" required placeholder="Enter Email"><br>
+
+       
+            <input type="password" id="password" name="password" required placeholder="Enter Password"><br>
+
+            <button type="submit">Login</button>
+        </form>
+        <p id="email-error" class="error"></p>
+        <p id="password-error" class="error"></p>
+        <p id="error-message" class="error" style="text-align: center;"></p>
+    </div>
+
+    <script>
+        // JavaScript code to handle login
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const registeredEmail = 'findthere@usa.edu.ph';
+            const registeredPassword = 'admin@USAfindthere';
+
+            // Get user input
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (email === registeredEmail && password === registeredPassword) {
+                // Redirect to the dashboard page on successful login
+                window.location.href = 'dashboard.php';
+            } else {
+                // Display an error message
+                document.getElementById('error-message').textContent = 'Invalid email or password.';
+            }
+        });
+    </script>
+</body>
+</html>
