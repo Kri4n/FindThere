@@ -5,129 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
     <title>View Found Items</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            min-height: 100vh;
-        }
-
-        h2 {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .top-bar {
-            background-color: #ff5858;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .top-bar h1 {
-            color: white;
-            margin: 0;
-            font-size: 28px;
-        }
-
-        .nav-buttons {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-
-        .nav-buttons a {
-            text-decoration: none;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .nav-buttons a:hover {
-            background-color: #cc0000;
-        }
-
-        .content {
-            padding: 20px;
-            margin-top: 50px;
-            text-align: center; /* Center-align content */
-        }
-
-        img.findtherelogo {
-            max-width: 100%;
-            width: 300px;
-            height: auto;
-            display: block;
-            margin: 0 auto; /* Center the image horizontally */
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
-
-        .content-box {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .content-box p {
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-
-        footer {
-            background-color: #808080;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .search-bar {
-            text-align: center; /* Center-align the search bar */
-            margin-bottom: 20px; /* Add space between the search bar and paragraph */
-        }
-
-        .search-input {
-            padding: 10px; /* Increase padding for a longer input field */
-            border: none;
-            border-radius: 50px;
-            width: 70%; /* Make the input field longer */
-            max-width: 400px; /* Limit the maximum width */
-            background-color: lightgray;
-        }
-
-        .search-button {
-            background-color: #cc0000;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px; /* Increase padding for a larger button */
-            margin-left: 10px;
-            cursor: pointer;
-        }
-
-        .content-box {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-            grid-gap: 20px;
-        }
-
-        .found-item {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px; /* Add margin to create space around each grid item */
-        }
 
         .popup {
     display: none;
@@ -173,16 +53,33 @@
     </style>
 </head>
 <body>
-<div class="top-bar">
-        <ul class="nav-buttons">
-            <li style="margin-right: 300px;"><a href="userhomepage.html">HOME</a></li>
-            <li><a href="lostitemsubmission.html">I Lost an Item</a></li>
-            <li><a href="founditemsubmission.html">I Found an Item</a></li>
-            <li><a href="displaylostitems.php">View Lost Items</a></li>
-            <li><a href="displayfounditems.php">View Found Items</a></li>
-            <li><a href="displayreturneditems.php">View Returned Items</a></li>
-        </ul>
+<nav class="navbar navbar-expand-lg top-bar">
+    <div class="container-fluid nav-buttons">
+        <a class="navbar-brand" href="userhomepage.html">HOME</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="lostitemsubmission.html">I Lost an item</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="founditemsubmission.html">I Found an Item</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="displaylostitems.php">View Lost Items</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="displayfounditems.php">View Found Items</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="displayreturneditems.php">View Returned Items</a>
+                </li>
+            </ul>
+        </div>
     </div>
+</nav>
 
     <div class="content">
         <h2>FOUND ITEMS</h2>
@@ -219,7 +116,7 @@
             
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<div class='found-item'>";
+                    echo "<div class='item-container'>";
                     echo "<img src='uploads/{$row['image']}' alt='Found Item Image' width='100' height='100' />";
                     echo "<h3>{$row['item']}</h3>";
                     echo "<p>{$row['details']}</p>";
@@ -253,7 +150,7 @@
             
         </div>
     </div>
-    <footer>
+    <footer class="p-5">
         ALTT © 2023
     </footer>
     <div id="claimPopup" class="popup">

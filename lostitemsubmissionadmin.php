@@ -61,7 +61,7 @@ if (isset($_POST['submitlostitem'])) {
     <style>
         body {
         font-family: Arial, sans-serif;
-        background-image: url('questionmark.jpg'); /* Set the background image */
+        background-image: url('./images/questionmark.jpg'); /* Set the background image */
         background-size: cover; /* Adjust the size to cover the entire background */
         background-repeat: no-repeat; /* Prevent the image from repeating */
         margin: 0;
@@ -128,7 +128,7 @@ if (isset($_POST['submitlostitem'])) {
     <div class="container">
         <div class="back-button">
             <a href="lostitemreports.php">
-                <img src="blackbackbutton.png" alt="Back" style="width: 55px; height: 55px;"> 
+                <img src="./images/blackbackbutton.png" alt="Back" style="width: 55px; height: 55px;"> 
             </a>
         </div>
         <h1>Report Lost Item</h1>

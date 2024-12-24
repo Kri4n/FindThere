@@ -418,21 +418,21 @@
     </div>
 
     <div class="left-bar">
-        <img src="findtherelogo.png" alt="findtherelogo" class="findtherelogo">
+        <img src="./images/findtherelogo.png" alt="findtherelogo" class="findtherelogo">
     </a>
          <p>Hello, Admin</p>
         <a href="#" id="notification-bell">
-            <img src="notificationbell.png" alt="Notification Bell" class="notification-bell"> Notifications 
+            <img src="./images/notificationbell.png" alt="Notification Bell" class="notification-bell"> Notifications 
             <span id="unread-count" class="badge"></span>
     </a>
         <a href="dashboard.php">
-            <img src = "dashboardlogo.png" alt="Dashboard" class="dashboard"> <span style="color: red;">Dashboard</span>
+            <img src = "./images/dashboardlogo.png" alt="Dashboard" class="dashboard"> <span style="color: red;">Dashboard</span>
         </a>
         <a href="lostitemreports.php">
-            <img src = "reports.png" alt="Reports" class="reports"> Reports
+            <img src = "./images/reports.png" alt="Reports" class="reports"> Reports
         </a>
         <a href="#" id="logout-button">
-            <img src="logout.png" alt="Logout" class="logout"> Logout
+            <img src="./images/logout.png" alt="Logout" class="logout"> Logout
         </a>
     </div>
     <div class="notification-box" id="notification-box">
@@ -516,7 +516,7 @@
     <div class="content">
         <div class="item">
             <a href="lostitemreports.php" >
-            <img src="lostitemlogo.png" alt="Lost Item">
+            <img src="./images/lostitemlogo.png" alt="Lost Item">
             <h2>Lost Item</h2>
             <?php
                 // Query to fetch the count of rows from the lost_items table
@@ -534,7 +534,7 @@
         </div>
         <div class="item">
             <a href="founditemreports.php" >
-            <img src="founditemlogo.png" style="width: 100px; height: 99px;" alt="Found Item">
+            <img src="./images/founditemlogo.png" style="width: 100px; height: 99px;" alt="Found Item">
             <h2>Found Item</h2>
             <?php
                 $query = "SELECT COUNT(*) FROM found_items";
@@ -551,7 +551,7 @@
         </div>
         <div class="item">
             <a href="returneditemreports.php" >
-            <img src="returneditemlogo.png" alt="Returned Item">
+            <img src="./images/returneditemlogo.png" alt="Returned Item">
             <h2>Returned Item</h2>
             <?php
                 $query = "SELECT COUNT(*) FROM returned_items";
@@ -568,7 +568,7 @@
         </div>
         <div class="item">
         <a href="disposeditemreports.php" >
-            <img src="disposeditemlogo.png" alt="Disposed Item">
+            <img src="./images/disposeditemlogo.png" alt="Disposed Item">
             <h2>Disposed Item</h2>
             <?php
                 $query = "SELECT COUNT(*) FROM disposed_items";
@@ -630,12 +630,12 @@
     ?>
         </div>
         <div class="visitor-container">
-            <img src="visitors.png" alt="Visitor Image" class="visitor-image">
+            <img src="./images/visitors.png" alt="Visitor Image" class="visitor-image">
             <h3 style="margin-top: -88px;">Total Visitors</h3>
             <p class="visitor-count"><?php echo $visitorCounter; ?></p>
 </div>
         <div class="total-records-container">
-        <img src="totalreports.png" alt="total reports image" class="totalreports-image">
+        <img src="./images/totalreports.png" alt="total reports image" class="totalreports-image">
         <h3 style="margin-top: -88px;">Total Records</h3>
         <?php
         $totalRecords = $lost_items_count + $found_items_count + $returned_items_count + $disposed_items_count;

@@ -22,7 +22,7 @@ body {
 }
 
 .nav-buttons a:hover {
-    background-color: #cc0000;
+    background-color: #740000;
 }
 
 .content {
@@ -40,14 +40,14 @@ img.findtherelogo {
     margin-bottom: 70px;
 }
 
-.content-box {
+.content-homepage {
     background-color: rgba(173, 164, 164, 0.8);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.content-box p {
+.content-homepage p {
     margin-bottom: 15px;
     line-height: 1.5;
 }
@@ -104,4 +104,72 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+.return-button {
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px; /* Add some top margin for spacing */
+    cursor: pointer;
+}
+
+.return-button:hover {
+    background-color: #990000; /* Darker red on hover */
+}
+
+.search-bar {
+    text-align: center; /* Center-align the search bar */
+    margin-bottom: 20px; /* Add space between the search bar and paragraph */
+}
+
+.search-input {
+    padding: 10px; /* Increase padding for a longer input field */
+    border: none;
+    border-radius: 50px;
+    width: 70%; /* Make the input field longer */
+    max-width: 400px; /* Limit the maximum width */
+    background-color: lightgray;
+}
+
+.search-button {
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; /* Increase padding for a larger button */
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.content {
+    padding: 20px;
+    margin-top: 50px;
+    text-align: center; /* Center-align content */
+}
+
+.content-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content-box p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.content-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-gap: 20px;
+}
+
+.item-container {
+    border: 1px solid #ccc !important;
+    padding: 10px;
+    margin: 10px; /* Add margin to create space around each grid item */
 }

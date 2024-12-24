@@ -378,20 +378,20 @@
     </div>
 
     <div class="left-bar">
-        <img src="findtherelogo.png" alt="findtherelogo" class="findtherelogo">
+        <img src="./images/findtherelogo.png" alt="findtherelogo" class="findtherelogo">
          <p>Hello, Admin</p>
         <a href="#" id="notification-bell">
-            <img src="notificationbell.png" alt="Notification Bell" class="notification-bell"> Notifications
+            <img src="./images/notificationbell.png" alt="Notification Bell" class="notification-bell"> Notifications
             <span id="unread-count" class="badge"></span>
     </a>
         <a href="dashboard.php">
-            <img src = "dashboardlogo.png" alt="Dashboard" class="dashboard"> Dashboard
+            <img src = "./images/dashboardlogo.png" alt="Dashboard" class="dashboard"> Dashboard
         </a>
         <a href="disposeditemreports.php">
-            <img src = "reports.png" alt="Reports" class="reports"> <span style="color: red;">Reports</span>
+            <img src = "./images/reports.png" alt="Reports" class="reports"> <span style="color: red;">Reports</span>
         </a>
         <a href="#" id="logout-button">
-            <img src="logout.png" alt="Logout" class="logout"> Logout
+            <img src="./images/logout.png" alt="Logout" class="logout"> Logout
         </a>
     </div>
         <div class="notification-box" id="notification-box">

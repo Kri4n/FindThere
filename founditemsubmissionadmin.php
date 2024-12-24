@@ -62,7 +62,7 @@ if (isset($_POST['submitfounditem'])) {
     <style>
         body {
         font-family: Arial, sans-serif;
-        background-image: url('schoolsupplies.jpg'); /* Set the background image */
+        background-image: url('./images/schoolsupplies.jpg'); /* Set the background image */
         background-size: cover; /* Adjust the size to cover the entire background */
         background-repeat: no-repeat; /* Prevent the image from repeating */
         margin: 0;
@@ -129,7 +129,7 @@ if (isset($_POST['submitfounditem'])) {
     <div class="container">
         <div class="back-button">
             <a href="founditemreports.php">
-                <img src="blackbackbutton.png" alt="Back" style="width: 55px; height: 55px;"> 
+                <img src="./images/blackbackbutton.png" alt="Back" style="width: 55px; height: 55px;"> 
             </a>
         </div>
         <h1>Report Found Item</h1>
